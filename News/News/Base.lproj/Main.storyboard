@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hq0-SW-Juq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="nY8-AN-gZJ">
+            <objects>
+                <tableViewController id="YLP-xL-NAo" customClass="HomeViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="AcG-gX-wkD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="YLP-xL-NAo" id="qky-nz-v0o"/>
+                            <outlet property="delegate" destination="YLP-xL-NAo" id="T67-O8-717"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Goz-tc-MxR"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iNG-bZ-YnY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1850" y="238"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="s7s-8g-afB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hq0-SW-Juq" customClass="RootViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iGz-kr-Yi1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YLP-xL-NAo" kind="relationship" relationship="rootViewController" id="0g8-ae-Zf3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3MF-nX-6WS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092" y="237.93103448275863"/>
+        </scene>
+    </scenes>
+</document>
